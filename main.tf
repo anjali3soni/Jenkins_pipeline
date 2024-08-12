@@ -118,12 +118,12 @@ resource "aws_s3_object" "index_html" {
   content_type = "text/html"
 }
 
-resource "aws_s3_object" "style_css" {
-  bucket = aws_s3_bucket.static-proj.bucket
-  source = "./style.css"
-  key    = "style.css"
-  content_type = "text/css"
-}
+# resource "aws_s3_object" "style_css" {
+#   bucket = aws_s3_bucket.static-proj.bucket
+#   source = "./style.css"
+#   key    = "style.css"
+#   content_type = "text/css"
+# }
 
 output "link" {
   value = aws_s3_bucket_website_configuration.static-proj.website_endpoint
